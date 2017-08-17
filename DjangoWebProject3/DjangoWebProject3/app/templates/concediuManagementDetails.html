@@ -1,0 +1,17 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+        <form action="edit" method="post" class="form-style-8" style="font-family: 'Open Sans Condensed', arial, sans; width: 500px; animation-fill-mode:backwards;   padding: 30px;    background: #FFFFFF;    margin: 50px auto;    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);">
+            {% csrf_token %}
+                <p>Employee name: {{concediu.full_name}}</p>
+                <p>Employee email address: {{concediu.email_address}}</p>
+                <p>From date: {{concediu.start_date}}</p>
+                <p>To date: {{concediu.end_date}}</p>
+                <p>Number of days off: {{concediu.days_off}}</p>
+
+            <input type="hidden" name="concediu" value="{{concediu.id}}"/>
+                <button name="validate" class="validate" type="submit" style="-moz-box-shadow: inset 0px 1px 0px 0px #207D23;    -webkit-box-shadow: inset 0px 1px 0px 0px #207D23;    box-shadow: inset 0px 1px 0px 0px #207D23;    background-color: #207D23;    border: 1px solid #207D23;    display: inline-block;    cursor: pointer;    color: #FFFFFF;    font-family: 'Open Sans Condensed', sans-serif;    font-size: 14px;    padding: 8px 18px;    text-decoration: none;    text-transform: uppercase;">Validate</button>
+        </form>      
+
+{% endblock %}

@@ -1,0 +1,14 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+            {%for oohrequest in object_list%}
+                <div class="form-style-8" style="font-family: 'Open Sans Condensed', arial, sans; width: 500px; animation-fill-mode:backwards;   padding: 30px;    background: #FFFFFF;    margin: 50px auto;    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);">New OOH request from
+                    <a href="{% url 'oohrequestManagementDetails' oohrequest.id %}">{{oohrequest.full_name}}</a>
+                    <p>Full name: {{oohrequest.full_name}}</p>
+                    <p>Day worked: {{oohrequest.day}}</p>
+                </div>
+            {%endfor%}
+
+
+
+{% endblock %}

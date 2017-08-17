@@ -1,0 +1,13 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+
+<div style="margin-top:100px;">
+        <form action="pont" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="pontaj" value="generatePontaj"/>
+            <button type="submit">Generate Pontaj</button>
+        </form>
+</div>
+
+{% endblock %}
