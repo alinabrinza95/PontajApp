@@ -128,5 +128,5 @@ STATIC_ROOT = posixpath.join(*(BASE_DIR.split(os.path.sep) + ['static']))
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'internalapppontaj@gmail.com'
-EMAIL_HOST_PASSWORD = 'SCCpontaj2017$'
+EMAIL_HOST_PASSWORD = ''
 EMAIL_PORT = 587
